@@ -4,7 +4,7 @@
   "main": "handler.js",
   "license": "MIT",
   "scripts": {
-    "test": "serverless-bundle test"
+    "test": "echo \"Info: run tests from service 2\" && exit 0"
   },
   "devDependencies": {
     "serverless-bundle": "^1.9.0"
