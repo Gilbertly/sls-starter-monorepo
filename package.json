@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "deploy:dev": "lerna run deploy --since origin/master",
+    "deploy:prod": "lerna run deploy --since HEAD",
     "build:prod": "lerna run build:prod",
     "clean:build": "lerna clean --yes && lerna bootstrap"
   }
