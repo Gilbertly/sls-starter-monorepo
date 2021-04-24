@@ -4,7 +4,7 @@
   "scripts": {
     "deploy:staging": "lerna run deploy --since origin/develop",
     "deploy:dev": "lerna run deploy --since origin/master",
-    "deploy:prod": "lerna run deploy --since HEAD",
+    "deploy:prod": "lerna run deploy --since",
     "build:prod": "lerna run build:prod",
     "clean:build": "lerna clean --yes && lerna bootstrap"
   }

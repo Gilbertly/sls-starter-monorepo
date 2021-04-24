@@ -29,6 +29,11 @@ jobs:
         if: github.ref == 'refs/heads/develop'
         run: npm run deploy:dev
 
-      - name: Deploy to Prod
+      - name: Deploy to Prod and tag release
         if: github.ref == 'refs/heads/master'
-        run: npm run deploy:prod
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          npm run deploy:prod
+          git archive -o monorepo.zip master
+          npx semantic-release

@@ -4,6 +4,6 @@ import lib from '../../../../libs';
 export async function handler(event, context) {
   return {
     statusCode: 200,
-    body: `Hello World! Via auth service!`,
+    body: `Hello World! via auth service!`,
   };
 }
