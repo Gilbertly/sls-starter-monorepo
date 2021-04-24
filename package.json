@@ -2,6 +2,7 @@
   "name": "monorepo",
   "private": true,
   "scripts": {
+    "deploy:staging": "lerna run deploy --since origin/develop",
     "deploy:dev": "lerna run deploy --since origin/master",
     "deploy:prod": "lerna run deploy --since HEAD",
     "build:prod": "lerna run build:prod",
