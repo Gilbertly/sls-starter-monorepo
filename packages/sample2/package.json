@@ -1,0 +1,12 @@
+{
+  "name": "@monorepo/sample2",
+  "version": "0.0.1",
+  "main": "sample2.js",
+  "license": "MIT",
+  "scripts": {
+    "deploy": "echo \"Info: deploying sample2 package\" && exit 0"
+  },
+  "dependencies": {
+    "@sentry/node": "^6.3.1"
+  }
+}

@@ -1,6 +1,6 @@
 {
   "version": "independent",
-  "npmClient": "yarn",
-  "useWorkspaces": true,
-  "loglevel": "error"
+  "npmClient": "npm",
+  "loglevel": "error",
+  "packages": ["packages/*", "services/*"]
 }

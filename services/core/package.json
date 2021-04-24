@@ -1,0 +1,13 @@
+{
+  "name": "@monorepo/core",
+  "version": "0.0.1",
+  "main": "handler.js",
+  "license": "MIT",
+  "scripts": {
+    "deploy": "echo \"Info: deploying core service\" && exit 0"
+  },
+  "dependencies": {
+    "@sentry/node": "^6.3.1",
+    "aws-sdk": "^2.892.0"
+  }
+}
