@@ -33,7 +33,4 @@ jobs:
         if: github.ref == 'refs/heads/master'
         env:
           GH_TOKEN: ${{ github.token }}
-        run: |
-          npm run deploy:prod
-          git archive -o monorepo.zip master
-          npx semantic-release
+        run: npm run deploy:prod
