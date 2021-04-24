@@ -19,7 +19,7 @@ jobs:
           key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
 
       - name: Install dependencies
-        run: npm i -g lerna
+        run: npm i --dev lerna
 
       - name: Deploy Dev
         run: npm run deploy:dev
