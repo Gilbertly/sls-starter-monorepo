@@ -1,7 +1,5 @@
 name: buildDeploy
-on:
-  push:
-    branches: [master, develop]
+on: push
 
 jobs:
   buildDeploy:
@@ -22,6 +20,10 @@ jobs:
 
       - name: Install dependencies
         run: npm i --dev lerna
+
+      - name: Deploy to Staging
+        if: github.ref != 'refs/heads/develop' && github.ref != 'refs/heads/master'
+        run: npm run deploy:staging
 
       - name: Deploy to Dev
         if: github.ref == 'refs/heads/develop'
