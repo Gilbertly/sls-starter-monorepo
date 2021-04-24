@@ -1,10 +1,6 @@
 {
   "name": "monorepo",
   "private": true,
-  "workspaces": [
-    "packages/*",
-    "services/*"
-  ],
   "scripts": {
     "deploy:dev": "lerna run deploy",
     "build:prod": "lerna run build:prod",
