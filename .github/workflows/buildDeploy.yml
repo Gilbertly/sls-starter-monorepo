@@ -1,10 +1,8 @@
-name: sls-starter-monorepo
-on:
-  push:
-    branches: [master, develop]
+name: buildDeploy
+on: push
 
 jobs:
-  build:
+  buildDeploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -12,7 +10,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Restore & Cache lerna
+      - name: Restore & ache lerna
         uses: actions/cache@v2
         with:
           path: |
@@ -23,5 +21,14 @@ jobs:
       - name: Install dependencies
         run: npm i --dev lerna
 
-      - name: Deploy Dev
+      - name: Deploy to Staging
+        if: github.ref == 'refs/heads/feat-**'
+        run: npm run deploy:staging
+
+      - name: Deploy to Dev
+        if: github.ref == 'refs/heads/develop'
         run: npm run deploy:dev
+
+      - name: Deploy to Prod
+        if: github.ref == 'refs/heads/master'
+        run: npm run deploy:prod
