@@ -4,7 +4,7 @@
   "main": "sample1.js",
   "license": "MIT",
   "scripts": {
-    "deploy": "echo \"Info: deploying sample2 package\" && exit 0"
+    "deploy": "echo \"Info: deploying sample1 package\" && exit 0"
   },
   "dependencies": {
     "@sentry/node": "^6.3.1"
