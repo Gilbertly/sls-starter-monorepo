@@ -1,0 +1,25 @@
+name: sls-starter-monorepo
+on:
+  push:
+    branches: [master, develop]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Restore & Cache lerna
+        uses: actions/cache@v2
+        with:
+          path: |
+            node_modules
+            */*/node_modules
+          key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
+
+      - name: Install dependencies
+        run: npm i --dev lerna
+
+      - name: Deploy Dev
+        run: npm run deploy:dev
