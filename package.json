@@ -2,7 +2,7 @@
   "name": "monorepo",
   "private": true,
   "scripts": {
-    "deploy:dev": "lerna run --parallel deploy --since master",
+    "deploy:dev": "lerna run --parallel deploy",
     "build:prod": "lerna run build:prod",
     "clean:build": "lerna clean --yes && lerna bootstrap"
   }
