@@ -1,15 +1,15 @@
 {
   "name": "@monorepo/auth",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "main": "handler.js",
   "license": "MIT",
   "scripts": {
     "deploy": "echo \"Info: deploying auth service\" && exit 0"
   },
   "dependencies": {
-    "libs": "../../libs",
-    "@monorepo/sample1": "^0.0.1",
+    "@monorepo/sample1": "^0.0.2",
     "@sentry/node": "^6.3.1",
-    "aws-sdk": "^2.892.0"
+    "aws-sdk": "^2.892.0",
+    "libs": "../../libs"
   }
 }

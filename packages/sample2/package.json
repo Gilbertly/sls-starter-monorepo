@@ -1,6 +1,6 @@
 {
   "name": "@monorepo/sample2",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "sample2.js",
   "license": "MIT",
   "scripts": {
