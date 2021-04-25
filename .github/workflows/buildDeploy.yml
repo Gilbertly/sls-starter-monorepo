@@ -10,7 +10,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Restore & ache lerna
+      - name: Restore & cache lerna
         uses: actions/cache@v2
         with:
           path: |
