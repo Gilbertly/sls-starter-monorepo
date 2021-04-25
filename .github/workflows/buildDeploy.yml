@@ -19,7 +19,7 @@ jobs:
           key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
 
       - name: Install dependencies
-        run: npm i
+        run: npm i --no-package-lock
 
       - name: Deploy to Staging
         if: github.ref == 'refs/heads/feat-**'
