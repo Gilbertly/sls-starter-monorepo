@@ -4,7 +4,8 @@
   "scripts": {
     "deploy:staging": "lerna run deploy --stream --since origin/develop",
     "deploy:dev": "lerna run deploy --stream --since origin/master",
-    "deploy:prod": "lerna run deploy --stream --since && lerna version --yes",
+    "deploy:prod": "lerna run deploy --stream --since && npm run release:version",
+    "release:version": "lerna version --conventional-commits --no-commit-hooks --create-release github --yes",
     "build:prod": "lerna run build:prod",
     "clean:build": "lerna clean --yes && lerna bootstrap"
   },
