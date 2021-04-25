@@ -13,7 +13,7 @@
       "message": "chore(release): version bump %s",
       "ignoreChanges": [
         ".gitignore",
-        "package.json",
+        "package*.json",
         "**/*.md",
         "**/__tests__/**",
         "./github/**"
