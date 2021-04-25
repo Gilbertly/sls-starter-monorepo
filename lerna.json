@@ -2,5 +2,13 @@
   "version": "independent",
   "npmClient": "npm",
   "loglevel": "error",
-  "packages": ["packages/*", "services/*"]
+  "packages": ["packages/*", "services/*"],
+  "command": {
+    "publish": {
+      "conventionalCommits": true,
+      "message": "chore(release): version bump",
+      "registry": "https://npm.pkg.github.com/",
+      "allowBranch": "master"
+    }
+  }
 }
