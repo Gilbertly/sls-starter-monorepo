@@ -4,8 +4,12 @@
   "packages": ["packages/*", "services/*"],
   "command": {
     "version": {
+      "npmClient": "npm",
       "allowBranch": "master",
+      "create-release": "github",
       "changelogPreset": "angular",
+      "conventional-commits": true,
+      "no-commit-hooks": true,
       "message": "chore(release): version bump %s",
       "ignoreChanges": [
         ".gitignore",
