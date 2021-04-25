@@ -2,7 +2,7 @@
 ```sh
 # initial setup
 $ npm i -g lerna
-$ npm run clean:build
+$ npm i && npm run clean:build
 
 # install dependency everywhere
 $ lerna add <dependency>
