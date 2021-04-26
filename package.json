@@ -9,6 +9,10 @@
     "build:prod": "lerna run build:prod",
     "clean:build": "lerna clean --yes && lerna bootstrap"
   },
+  "workspaces": [
+    "packages/*",
+    "services/*"
+  ],
   "devDependencies": {
     "lerna": "^4.0.0"
   }
