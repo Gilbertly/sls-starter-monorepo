@@ -12,6 +12,9 @@ $ lerna add --dev <dependency>
 $ lerna add <dependency> <scope>/*
 $ lerna add --dev <dependency> <scope>/*
 
+# remove dependency
+$ lerna exec -- 'npm rm <dependency>'
+
 # build and deploy
 $ npm run build:<dev | prod>
 $ npm run deploy:<dev | prod>

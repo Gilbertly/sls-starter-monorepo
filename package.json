@@ -2,14 +2,15 @@
   "name": "monorepo",
   "private": true,
   "scripts": {
-    "deploy:staging": "lerna run deploy --stream --since origin/develop",
-    "deploy:dev": "lerna run deploy --stream --since origin/master",
-    "deploy:prod": "lerna run deploy --stream --since && npm run release:version",
+    "deploy:staging": "turbo run deploy --parallel --no-cache --since origin/develop",
+    "deploy:dev": "turbo run deploy --parallel --no-cache --since origin/master",
+    "deploy:prod": "turbo run deploy --parallel --since && npm run release:version",
     "release:version": "lerna version --conventional-commits --no-commit-hooks --create-release github --yes",
     "build:prod": "lerna run build:prod",
     "clean:build": "lerna clean --yes && lerna bootstrap"
   },
   "devDependencies": {
-    "lerna": "^4.0.0"
+    "lerna": "^4.0.0",
+    "turbo": "^1.1.2"
   }
 }
