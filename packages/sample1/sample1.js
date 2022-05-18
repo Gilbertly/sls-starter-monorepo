@@ -1,3 +1,3 @@
 export default function sample() {
-  return 'Sample package 1';
+  return 'sample package 1';
 }

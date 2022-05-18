@@ -1,16 +1,27 @@
 {
   "name": "monorepo",
   "private": true,
+  "workspaces": [
+    "packages/*",
+    "services/*"
+  ],
   "scripts": {
-    "deploy:staging": "turbo run deploy --parallel --no-cache --since origin/develop",
-    "deploy:dev": "turbo run deploy --parallel --no-cache --since origin/master",
-    "deploy:prod": "turbo run deploy --parallel --since && npm run release:version",
+    "deploy:staging": "turbo run deploy --parallel --no-cache --filter=...[origin/develop]",
+    "deploy:dev": "turbo run deploy --parallel --no-cache --filter=...[origin/master]",
+    "deploy:prod": "turbo run deploy --parallel --filter=...[origin/master] && npm run semantic:release",
     "release:version": "lerna version --conventional-commits --no-commit-hooks --create-release github --yes",
+    "semantic:release": "semantic-release",
     "build:prod": "lerna run build:prod",
     "clean:build": "lerna clean --yes && lerna bootstrap"
   },
   "devDependencies": {
-    "lerna": "^4.0.0",
+    "@commitlint/cli": "^17.0.0",
+    "@commitlint/config-conventional": "^17.0.0",
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^8.0.4",
+    "@semantic-release/release-notes-generator": "^10.0.3",
+    "semantic-release": "^19.0.2",
     "turbo": "^1.1.2"
   }
 }
