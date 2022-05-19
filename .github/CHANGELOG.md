@@ -1,5 +1,7 @@
 Auto-release Changelog
 
+## [1.0.1](https://github.com/Gilbertly/sls-starter-monorepo/compare/v1.0.0...v1.0.1) (2022-05-19)
+
 # 1.0.0 (2022-05-18)
 
 
