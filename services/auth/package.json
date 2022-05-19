@@ -7,7 +7,7 @@
     "deploy": "echo \"Info: deploying auth service\" && exit 0"
   },
   "dependencies": {
-    "libs": "../../libs",
+    "libs": "file:../../libs",
     "@monorepo/sample1": "^0.0.2",
     "@sentry/node": "^6.3.1",
     "aws-sdk": "^2.892.0"
